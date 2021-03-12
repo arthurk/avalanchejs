@@ -18,7 +18,8 @@ export const NetworkIDToHRP:object = {
   3: "denali",
   4: "everest",
   5: "fuji",
-  12345: "local"
+  12345: "local",
+  115110116: "statalanche"
 };
   
 export const HRPToNetworkID:object = {
@@ -28,7 +29,8 @@ export const HRPToNetworkID:object = {
   "denali": 3,
   "everest": 4,
   "fuji": 5,
-  "local": 12345
+  "local": 12345,
+  "statalanche": 115110116
 };
 
 export const NetworkIDToNetworkNames:object = {
@@ -38,7 +40,8 @@ export const NetworkIDToNetworkNames:object = {
   3: ["Denali"],
   4: ["Everest"],
   5: ["Fuji", "Testnet"],
-  12345: ["Local Network"]
+  12345: ["Local Network"],
+  115110116: ["Statalanche"]
 };
 
 export const NetworkNameToNetworkID:object = {
@@ -50,7 +53,8 @@ export const NetworkNameToNetworkID:object = {
   "Everest": 4,
   "Fuji": 5,
   "Testnet": 5,
-  "Local Network": 12345
+  "Local Network": 12345,
+  "Statalanche": 115110116
 };
 
 export const FallbackHRP:string = "custom";
@@ -301,6 +305,14 @@ const n12345C:any = { ...n5C };
 n12345C.blockchainID = '26sSDdFXoKeShAqVfvugUiUQKhMZtHYDLeBqmBfNfcdjziTrZA';
 n12345C.chainID = 43111;
 
+const n115110116X:any = { ...n5X };
+n115110116X.blockchainID = 'Fp8u3mHkE8UKcuyWVjF3h3zgj2jfHThN6GGLj9xp2QgDsizXN';
+const n115110116P:any = { ...n5P };
+n115110116P.blockchainID = '';
+const n115110116C:any = { ...n5C };
+n115110116C.blockchainID = 'oRs1d9D4vdnrtLn52MCph3S7T81mM5suGng6HED5URfJFN66U';
+n115110116C.chainID = 13375;
+
 export class Defaults {
   static network = {
     0: { 
@@ -365,6 +377,15 @@ export class Defaults {
       '11111111111111111111111111111111LpoYY': n12345P,
       C: n12345C,
       '26sSDdFXoKeShAqVfvugUiUQKhMZtHYDLeBqmBfNfcdjziTrZA': n12345C,
+    },
+    115110116: {
+      hrp: NetworkIDToHRP[115110116],
+      X: n115110116X,
+      'Fp8u3mHkE8UKcuyWVjF3h3zgj2jfHThN6GGLj9xp2QgDsizXN': n115110116X,
+      P: n115110116P,
+      '': n115110116P,
+      C: n115110116C,
+      'oRs1d9D4vdnrtLn52MCph3S7T81mM5suGng6HED5URfJFN66U': n115110116C,
     },
   };
 }
